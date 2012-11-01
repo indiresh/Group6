@@ -1,0 +1,84 @@
+<style type="text/css">
+div.wrapper
+{
+width:950px;
+height:750px;
+}
+div.header 
+{
+width:950px;
+height:165px;
+border:2px solid #000000;
+border-radius:15px;
+font-size:10px;
+margin-left:auto; 
+margin-right:auto;
+}
+h1
+{
+text-align:center;
+text-shadow:1px 1px 1px #907848;
+font-family:"Lucida Console";
+margin:5px;
+}
+div.navbar
+{
+width:500px;
+height:25px;
+border:2px solid #000000;
+border-radius:15px;
+font-size:20px;
+margin-top:0px;
+margin-left:auto;
+margin-right:auto;
+word-spacing:25px;
+text-align:center;
+}
+div.content_wrapper
+{
+width:950px;
+height:600px;
+margin-left:auto;
+margin-right:auto;
+margin-top:20px;
+}
+div.main
+{
+width:725px;
+height:700px;
+border:2px solid #000000;
+border-radius:15px;
+float:right;
+text-align:center;
+}
+div.sidebar
+{
+width:200px;
+height:700px;
+border:2px solid #000000;
+border-radius:15px;
+float:left;
+text-align:center;
+}
+a
+{
+text-decoration:none;
+text-shadow:1px 1px 1px #907848;
+}
+a:link 
+{
+color:#000000;
+}
+a:visited
+{
+color:#808080;
+}
+a:hover
+{
+opacity:0.5;
+}
+a:active
+{
+color:#000000
+}
+</style>
