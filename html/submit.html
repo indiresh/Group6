@@ -19,12 +19,65 @@ OU's Unofficial Digital Notice Board
 <div class="content_wrapper">
 <div class="main">
 <p>
-Future User Submission Form
+<form action="../php/submit.php" method="post">
+
+<table border="1" cellpadding="1" cellspacing="1" class="main" id="createNewProfile">
+<tr><td>
+	<p id="required">First Name:</p>
+</td><td>
+	<input type="text" name="fName" alt="Please enter your first name" />
+</td></tr>
+
+<tr>
+  <td><p id="required">Last Name : </p></td>
+  <td><input type="text" name="lName" alt="Please enter your last name" /></td>
+</tr>
+
+<tr>
+  <td><p id="required">Your email address:</p></td>
+  <td><input type="text" name="email" /></td>
+</tr>
+<tr>
+  <td><p id="required">Title of your post:</p></td>
+  <td><input type="text" name="title" /></td>
+</tr>
+<tr>
+  <td><p id="required">Your asking price: </p></td>
+  <td><input type="text" name="price" alt="Your asking price (if applicable)" /></td>
+</tr>
+<tr>
+  <td><p>Category:</p></td>
+  <td><select name="select" >
+    <option selected>Please Select...</option>
+    <option>Books</option>
+    <option>Events</option>
+    <option>Projects</option>
+    <option>Tutoring</option>
+    <option>Housing</option>
+    <option>Other</option>
+    </select>
+    </td>
+</tr>
+<tr>
+  <td><p>Photo URL: </p></td>
+  <td><input type="text" name="img" alt="Ex: http://www.facebook.com/bob/myPhoto.jpg" /></td>
+</tr>
+<tr>
+  <td><p>Description</p></td>
+  <td><textarea wrap="soft" rows="5" cols="35" name="description"></textarea></td>
+</tr>
+<tr>
+  <td colspan="2">
+    <input type="submit" value="Submit"/>  </td>
+  </tr>
+</table>
+
+</form>
 <p>
 </div>
 <div class="sidebar">
 <p>
-Sidebar
+Side bah
 </p>
 </div>
 </div>
