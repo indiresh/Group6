@@ -2,6 +2,46 @@
 
 <html>
 <head>
+<script language="javascript" type="text/javascript">
+function validateForm()
+{
+var jfirst=document.forms["postItForm"]["fName"].value;
+var jlast=document.forms["postItForm"]["lName"].value;
+var jemail=document.forms["postItForm"]["email"].value;
+var jtitle=document.forms["postItForm"]["title"].value;
+var jprice=document.forms["postItForm"]["price"].value;
+var jdescription=document.forms["postItForm"]["description"].value;
+if (jfirst==null || jfirst=="")
+  {
+  alert("First name must be filled out");
+  return false;
+  }
+
+if (jlast==null || jlast=="")
+  {
+  alert("Last name must be filled out");
+  return false;
+  }
+
+if (jemail==null || jemail=="")
+  {
+  alert("Email must be filled out");
+  return false;
+  }
+
+if (jtitle==null || jtitle=="")
+  {
+  alert("Title must be filled out");
+  return false;
+  }
+
+if (jdescription==null || jdescription=="")
+  {
+  alert("Description must be filled out");
+  return false;
+  }
+}
+</script>
 <link href="../css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -19,7 +59,7 @@ OU's Unofficial Digital Notice Board
 <div class="content_wrapper">
 <div class="main">
 <p>
-<form action="../php/submit.php" method="post">
+<form action="../php/submit.php" onsubmit="return validateForm()" method="post" name="postItForm">
 
 <table border="1" cellpadding="1" cellspacing="0" bordercolor="#000000" class="main" id="createNewProfile">
 <tr><td>

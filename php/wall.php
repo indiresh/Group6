@@ -53,7 +53,7 @@ OU's Unofficial Digital Notice Board
 		echo "<tr><td><table width='100%' border='0' cellspacing='0' cellpadding='0'>";
 		echo "
 		<tr>
-        <td width='150' height='150' rowspan='3'><img name='img' src='".$row["imageURL"]."' width='150' height='150' alt='img placeholder' style='background-color: #CC9900'></td>
+        <td width='150' height='150' rowspan='3'><img name='img' src='".$row["imageURL"]."' width='150' height='150' alt='No image'></td>
         <td>".$row["title"]."</td>
         <td>". $row["price"] . "</td>
       </tr>
