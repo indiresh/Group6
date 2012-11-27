@@ -50,10 +50,17 @@ OU's Unofficial Digital Notice Board
 			echo "</td></tr>";
 		//---------------------------------------------------------------------------	
 		*/
+		
 		echo "<tr><td><table width='100%' border='0' cellspacing='0' cellpadding='0'>";
+		$image = $row["imageURL"];
+		if ($image==null || $image=="")
+		{
+			$image = "../images/noimage.jpg";
+		//noimage.jpg
+		}
 		echo "
 		<tr>
-        <td width='150' height='150' rowspan='3'><img name='img' src='".$row["imageURL"]."' width='150' height='150' alt='No image'></td>
+        <td width='150' height='150' rowspan='3'><img name='img' src='".$image."' width='150' height='150' alt='No image'></td>
         <td>".$row["title"]."</td>
         <td>". $row["price"] . "</td>
       </tr>
