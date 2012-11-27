@@ -2,7 +2,52 @@
 
 <html>
 <head>
+<script language="javascript" type="text/javascript">
+function validateForm()
+{
+var jfirst=document.forms["postItForm"]["fName"].value;
+var jlast=document.forms["postItForm"]["lName"].value;
+var jemail=document.forms["postItForm"]["email"].value;
+var jtitle=document.forms["postItForm"]["title"].value;
+var jprice=document.forms["postItForm"]["price"].value;
+var jdescription=document.forms["postItForm"]["description"].value;
+if (jfirst==null || jfirst=="")
+  {
+  alert("First name must be filled out");
+  return false;
+  }
+
+if (jlast==null || jlast=="")
+  {
+  alert("Last name must be filled out");
+  return false;
+  }
+
+if (jemail==null || jemail=="")
+  {
+  alert("Email must be filled out");
+  return false;
+  }
+
+if (jtitle==null || jtitle=="")
+  {
+  alert("Title must be filled out");
+  return false;
+  }
+
+if (jdescription==null || jdescription=="")
+  {
+  alert("Description must be filled out");
+  return false;
+  }
+}
+</script>
 <link href="../css/main.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style1 {color: #FF0000}
+-->
+</style>
 </head>
 <body>
 <div class="wrapper">
@@ -18,13 +63,66 @@ OU's Unofficial Digital Notice Board
 </div>
 <div class="content_wrapper">
 <div class="main">
-<p>
-Future User Submission Form
+<p><span class="style1">*</span> = Required 
+<form action="../php/submit.php" onSubmit="return validateForm()" method="post" name="postItForm">
+
+<table border="1" cellpadding="1" cellspacing="0" bordercolor="#000000" class="main" id="createNewProfile">
+<tr><td>
+	<p id="required"><span class="style1">*</span>First Name:</p>
+</td><td>
+	<input type="text" name="fName" alt="Please enter your first name" />
+</td></tr>
+
+<tr>
+  <td><p id="required"><span class="style1">*</span>Last Name : </p></td>
+  <td><input type="text" name="lName" alt="Please enter your last name" /></td>
+</tr>
+
+<tr>
+  <td><p id="required"><span class="style1">*</span>Your email address:</p></td>
+  <td><input type="text" name="email" /></td>
+</tr>
+<tr>
+  <td><p id="required"><span class="style1">*</span>Title of your post:</p></td>
+  <td><input type="text" name="title" /></td>
+</tr>
+<tr>
+  <td><p id="required">Your asking price: </p></td>
+  <td><input type="text" name="price" alt="Your asking price (if applicable)" /></td>
+</tr>
+<tr>
+  <td><p>Category:</p></td>
+  <td><select name="select" >
+    <option selected>Please Select...</option>
+    <option>Books</option>
+    <option>Events</option>
+    <option>Projects</option>
+    <option>Tutoring</option>
+    <option>Housing</option>
+    <option>Other</option>
+    </select>
+    </td>
+</tr>
+<tr>
+  <td><p>Photo URL: </p></td>
+  <td><input type="text" name="img" alt="Ex: http://www.facebook.com/bob/myPhoto.jpg" /></td>
+</tr>
+<tr>
+  <td><p><span class="style1">*</span>Description</p></td>
+  <td><textarea wrap="soft" rows="5" cols="35" name="description"></textarea></td>
+</tr>
+<tr>
+  <td colspan="2">
+    <input type="submit" value="Submit"/>  </td>
+  </tr>
+</table>
+
+</form>
 <p>
 </div>
 <div class="sidebar">
 <p>
-Sidebar
+Side bah
 </p>
 </div>
 </div>
