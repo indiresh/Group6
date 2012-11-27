@@ -19,6 +19,9 @@ OU's Unofficial Digital Notice Board
 </div>
 <div class="content_wrapper">
 <div class="main">
+<marquee>
+This is the wall!
+</marquee>
 <p>
 <?php 
 	$dsn = "mysql:dbname=spoconno";
