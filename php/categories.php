@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 
 <html>
@@ -20,7 +19,21 @@ OU's Unofficial Digital Notice Board
 <div class="content_wrapper">
 <div class="main">
 <p>
-<?php 
+<form action="categories.php" method="post">
+<select name="select" >
+<option selected>Please Select...</option>
+    <option>Books</option>
+    <option>Events</option>
+    <option>Projects</option>
+    <option>Tutoring</option>
+    <option>Housing</option>
+    <option>Other</option>
+    </select>
+<input type="submit">
+</form>
+
+    
+<?php
 	$dsn = "mysql:dbname=spoconno";
 	$username = "spoconno";
 	$password = "tacotruck";
@@ -32,7 +45,7 @@ OU's Unofficial Digital Notice Board
 		echo "Connection failed: " . $e->getMessage();
 	}
 
-	$sql = "SELECT * FROM posts";
+	$sql = "SELECT * FROM posts WHERE category='". $_POST["select"]."'" ;
 	echo "<table border='1' cellpadding='1' cellspacing='0' bordercolor='#000000'>";
 	
 	
@@ -73,9 +86,8 @@ OU's Unofficial Digital Notice Board
 	}
 	echo "</table>";
 	$conn = null;
-?>
 
-<p>
+?>
 
 <p>
 </div>
@@ -88,7 +100,3 @@ Sidebar
 </div>
 </body>
 </html>
-
-
-
-<body>
