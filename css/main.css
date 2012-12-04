@@ -23,7 +23,7 @@ margin:5px;
 }
 div.navbar
 {
-width:500px;
+width:550px;
 height:25px;
 border:2px solid #000000;
 border-radius:15px;
@@ -44,22 +44,14 @@ margin-top:20px;
 }
 div.main
 {
-width:725px;
-
+width:945px;
+min-height:700px;
 border:2px solid #000000;
 border-radius:15px;
 float:right;
 text-align:center;
 }
-div.sidebar
-{
-width:200px;
-height:700px;
-border:2px solid #000000;
-border-radius:15px;
-float:left;
-text-align:center;
-}
+
 a
 {
 text-decoration:none;

@@ -1,10 +1,10 @@
-
 <!DOCTYPE HTML>
 
 <html>
 <head>
 <link href="../css/main.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
 <div class="wrapper">
 <div class="header">
@@ -14,14 +14,12 @@
 OU's Unofficial Digital Notice Board
 </h1>
 <div class="navbar">
-<a href="http://www.secs.oakland.edu/~djanders/index.html">Home</a> <a href="http://www.secs.oakland.edu/~djanders/html/categories.html">Categories</a> <a href="http://www.secs.oakland.edu/~djanders/html/about.html">AboutUs</a> <a href="http://www.secs.oakland.edu/~djanders/html/submit.html">SubmitPost</a>
+<a href="http://www.secs.oakland.edu/~djanders/index.html">Home</a> <a href="http://www.secs.oakland.edu/~djanders/php/categories.php">Categories</a> <a href="http://www.secs.oakland.edu/~djanders/html/about.html">AboutUs</a> <a href="http://www.secs.oakland.edu/~djanders/html/submit.html">SubmitPost</a> <a href="http://www.secs.oakland.edu/~djanders/php/wall.php">TheWall</a>
 </div>
 </div>
 <div class="content_wrapper">
 <div class="main">
-<marquee>
-This is the wall!
-</marquee>
+
 <p>
 <?php 
 	$dsn = "mysql:dbname=spoconno";
@@ -64,10 +62,6 @@ This is the wall!
         <td width='150'>". $row["firstName"] . " ". $row["lastName"] . "</td>
       </tr>
     </table> </td></tr> ";
-	
-	
-	
-	
 	//-----------------------------------------------------------
 		}
 	}
@@ -77,21 +71,9 @@ This is the wall!
 	echo "</table>";
 	$conn = null;
 ?>
-
-<p>
-
-<p>
-</div>
-<div class="sidebar">
-<p>
-Sidebar
-</p>
 </div>
 </div>
 </div>
 </body>
 </html>
-
-
-
 <body>

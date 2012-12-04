@@ -13,7 +13,7 @@
 OU's Unofficial Digital Notice Board
 </h1>
 <div class="navbar">
-<a href="http://www.secs.oakland.edu/~djanders/index.html">Home</a> <a href="http://www.secs.oakland.edu/~djanders/html/categories.html">Categories</a> <a href="http://www.secs.oakland.edu/~djanders/html/about.html">AboutUs</a> <a href="http://www.secs.oakland.edu/~djanders/html/submit.html">SubmitPost</a>
+<a href="http://www.secs.oakland.edu/~djanders/index.html">Home</a> <a href="http://www.secs.oakland.edu/~djanders/php/categories.php">Categories</a> <a href="http://www.secs.oakland.edu/~djanders/html/about.html">AboutUs</a> <a href="http://www.secs.oakland.edu/~djanders/html/submit.html">SubmitPost</a> <a href="http://www.secs.oakland.edu/~djanders/php/wall.php">TheWall</a>
 </div>
 </div>
 <div class="content_wrapper">
@@ -90,11 +90,6 @@ OU's Unofficial Digital Notice Board
 ?>
 
 <p>
-</div>
-<div class="sidebar">
-<p>
-Sidebar
-</p>
 </div>
 </div>
 </div>
