@@ -11,6 +11,7 @@ if ($_POST["ac"]=="log") { /// do after login form is submitted
 };
 if (array_key_exists($_SESSION["logged"],$USERS)) { //// check if user is logged or not 
      echo "You are logged in."; //// if user is logged show a message 
+	 header("Location: admin.php");
 } else { //// if not logged show login form
      echo '<form action="login.php" method="post"><input type="hidden" name="ac" value="log"> ';
      echo 'Username: <input type="text" name="username" />';
