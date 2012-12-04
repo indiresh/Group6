@@ -40,6 +40,7 @@ Attn Admins: These are all the posts available sorted by what has not been appro
 	}
 
 	$sql = "SELECT * FROM posts WHERE approval = 0";
+	echo "<a href='logoff.php'> Click Here To Log Off </a>";
 	echo "<table border='1' cellpadding='1' cellspacing='0' bordercolor='#000000'>";
 	
 	
