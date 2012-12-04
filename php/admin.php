@@ -93,6 +93,60 @@ Attn Admins: These are all the posts available sorted by what has not been appro
 		echo "Query fialed: " . $e->getMessage();
 	}
 	echo "</table>";
+	$sql = "SELECT * FROM posts";
+	echo "<hr /> <br /> These are all the posts available sorted by what has been approved.";
+	echo "<table border='1' cellpadding='1' cellspacing='0' bordercolor='#000000'>";
+	
+	
+	try {
+		$rows = $conn->query( $sql );
+		foreach ( $rows as $row ) {
+				
+		echo "<tr><td><table width='90%' border='0' cellspacing='0' cellpadding='0'>";
+		$image = $row["imageURL"];
+		if ($image==null || $image=="")
+		{
+			$image = "../images/noimage150x150.png";
+		//noimage.jpg
+		}
+		
+		echo "
+		<tr>
+        <td width='150' height='150' rowspan='3'><img name='img' src='".$image."' width='150' height='150' alt='No image'></td>
+        <td>".$row["title"]."</td>
+        <td>". $row["price"] . "</td>
+      </tr>
+      <tr>
+        <td rowspan='2'>". $row["description"] . "</td>
+        <td>". $row["contactInfo"] . "</td>
+		
+      </tr>
+      <tr>
+        <td width='150'>". $row["firstName"] . " ". $row["lastName"] . " " . $row["postID"] ."</td>
+      </tr>
+	  <tr>
+	  <form id='form1' name='" . $row["postID"] . "' method='post' action='adminmodify.php'>
+    	<select name='select' >
+    	<option selected>Please Select...</option>
+   	 	<option>Approve ".$row["postID"]."</option>
+    	<option>Delete ".$row["postID"]."</option>
+    	<option>Email User ".$row["postID"]."</option>
+    	</select>
+		<input type='submit' name='Go' value='Go' />
+		</form>
+		</td></tr>
+    </table> </td></tr> ";
+	
+	
+	
+	
+	//-----------------------------------------------------------
+		}
+	}
+	catch ( PDOException $e ) {
+		echo "Query fialed: " . $e->getMessage();
+	}
+	echo "</table>";
 	$conn = null;
 ?>
 
