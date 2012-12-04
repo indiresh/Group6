@@ -33,7 +33,7 @@ OU's Unofficial Digital Notice Board
 		echo "Connection failed: " . $e->getMessage();
 	}
 
-	$sql = "SELECT * FROM posts";
+	$sql = "SELECT * FROM posts where approved = 1";
 	echo "<table border='1' cellpadding='1' cellspacing='0' bordercolor='#000000'>";
 	
 	
