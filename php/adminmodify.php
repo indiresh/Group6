@@ -51,6 +51,7 @@ if (!mysql_query($sql,$con))
   {
   die('Error: ' . mysql_error());
   }	
+  header("Location: admin.php");
 ?>
 
 </body>
