@@ -2,13 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-
 <meta http-equiv="Refresh" content="3;url=http://www.secs.oakland.edu/~djanders/php/wall.php">
 <title>Submit</title>
 </head>
 
 <body>
-
 
 <p>Welcome:  <?php echo $_POST["fName"]; ?><br />
 Last Name: <?php echo $_POST["lName"]; ?> <br />
@@ -19,8 +17,7 @@ Photo: <?php echo $_POST["img"]; ?><br />
 Description: <?php echo $_POST["description"]; ?></p>
 <p>REDIRECTING in 3 seconds... <br />
   
-  <?php
-
+<?php
 
 $con = mysql_connect("localhost","spoconno","tacotruck");
 if (!$con)
@@ -40,10 +37,7 @@ if (!mysql_query($sql,$con))
 echo "<br> 1 record added";
 mail("spoconno@oakland.edu", "PostRequest", "A record has been created with post ID: " . $t , "postId = " . $t);
 mysql_close($con);
-
-
 ?> 
-  
   
 </p>
 </body>

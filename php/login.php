@@ -1,3 +1,26 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="background-color:#000000;">
+<div class="wrapper">
+<div class="header">
+<h1>
+<img src="../images/banner.png">
+<br/>
+OU's Unofficial Digital Notice Board
+</h1>
+<div class="navbar">
+<a href="http://www.secs.oakland.edu/~djanders/index.html">Home</a> <a href="http://www.secs.oakland.edu/~djanders/php/categories.php">Categories</a> <a href="http://www.secs.oakland.edu/~djanders/html/about.html">AboutUs</a> <a href="http://www.secs.oakland.edu/~djanders/html/submit.html">SubmitPost</a> <a href="http://www.secs.oakland.edu/~djanders/php/wall.php">TheWall</a>
+</div>
+</div>
+<div class="content_wrapper">
+<div class="main">
+
+<p>
 <?php
 session_start();
 include("passwords.php");
@@ -20,3 +43,9 @@ if (array_key_exists($_SESSION["logged"],$USERS)) { //// check if user is logged
      echo '</form>';
 };
 ?>
+</div>
+</div>
+</div>
+</body>
+</html>
+<body>

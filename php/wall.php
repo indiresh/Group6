@@ -5,7 +5,7 @@
 <link href="../css/main.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body style="background-color:#000000;">
 <div class="wrapper">
 <div class="header">
 <h1>
@@ -19,8 +19,8 @@ OU's Unofficial Digital Notice Board
 </div>
 <div class="content_wrapper">
 <div class="main">
-
-<p>
+</br>
+</br>
 <?php 
 	$dsn = "mysql:dbname=spoconno";
 	$username = "spoconno";
@@ -76,4 +76,3 @@ OU's Unofficial Digital Notice Board
 </div>
 </body>
 </html>
-<body>

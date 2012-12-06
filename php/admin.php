@@ -8,7 +8,6 @@ check_logged(); /// function checks if visitor is logged.
 
 <html>
 <head>
-
 <link href="../css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -20,7 +19,8 @@ check_logged(); /// function checks if visitor is logged.
 OU's Unofficial Digital Notice Board
 </h1>
 <div class="navbar">
-<a href="http://www.secs.oakland.edu/~djanders/index.html">Home</a> <a href="http://www.secs.oakland.edu/~djanders/html/categories.html">Categories</a> <a href="http://www.secs.oakland.edu/~djanders/html/about.html">AboutUs</a> <a href="http://www.secs.oakland.edu/~djanders/html/submit.html">SubmitPost</a>
+<a href="http://www.secs.oakland.edu/~djanders/index.html">Home</a> <a href="http://www.secs.oakland.edu/~djanders/php/categories.php">Categories</a> <a href="http://www.secs.oakland.edu/~djanders/html/about.html">AboutUs</a> <a href="http://www.secs.oakland.edu/~djanders/html/submit.html">SubmitPost</a> <a href="http://www.secs.oakland.edu/~djanders/php/wall.php">TheWall</a>
+
 </div>
 </div>
 <div class="content_wrapper">
@@ -43,7 +43,6 @@ Attn Admins: These are all the posts available sorted by what has not been appro
 	echo "<a href='logoff.php'> Click Here To Log Off </a>";
 	echo "<table border='1' cellpadding='1' cellspacing='0' bordercolor='#000000'>";
 	
-	
 	try {
 		$rows = $conn->query( $sql );
 		foreach ( $rows as $row ) {
@@ -82,9 +81,6 @@ Attn Admins: These are all the posts available sorted by what has not been appro
 		</form>
 		</td></tr>
     </table> </td></tr> ";
-	
-	
-	
 	
 	//-----------------------------------------------------------
 		}
@@ -97,7 +93,6 @@ Attn Admins: These are all the posts available sorted by what has not been appro
 	echo "<hr /> <br /> These are all the posts available sorted by what has been approved.";
 	echo "<table border='1' cellpadding='1' cellspacing='0' bordercolor='#000000'>";
 	
-	
 	try {
 		$rows = $conn->query( $sql );
 		foreach ( $rows as $row ) {
@@ -137,9 +132,6 @@ Attn Admins: These are all the posts available sorted by what has not been appro
 		</td></tr>
     </table> </td></tr> ";
 	
-	
-	
-	
 	//-----------------------------------------------------------
 		}
 	}
@@ -149,21 +141,10 @@ Attn Admins: These are all the posts available sorted by what has not been appro
 	echo "</table>";
 	$conn = null;
 ?>
-
-<p>
-
-<p>
-</div>
-<div class="sidebar">
-<p>
-Sidebar
-</p>
+</br>
+</br>
 </div>
 </div>
 </div>
 </body>
 </html>
-
-
-
-<body>

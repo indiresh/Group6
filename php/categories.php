@@ -4,7 +4,7 @@
 <head>
 <link href="../css/main.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body style="background-color:#000000;">
 <div class="wrapper">
 <div class="header">
 <h1>
@@ -19,7 +19,7 @@ OU's Unofficial Digital Notice Board
 <div class="content_wrapper">
 <div class="main">
 <p>
-<form action="categories.php" method="post">
+<center><form action="categories.php" method="post">
 <select name="select" >
 <option selected>Please Select...</option>
     <option>Books</option>
@@ -31,8 +31,7 @@ OU's Unofficial Digital Notice Board
     </select>
 <input type="submit">
 </form>
-
-    
+</center>
 <?php
 	$dsn = "mysql:dbname=spoconno";
 	$username = "spoconno";
@@ -47,7 +46,6 @@ OU's Unofficial Digital Notice Board
 
 	$sql = "SELECT * FROM posts WHERE category='". $_POST["select"]."'" ;
 	echo "<table border='1' cellpadding='1' cellspacing='0' bordercolor='#000000'>";
-	
 	
 	try {
 		$rows = $conn->query( $sql );
@@ -75,9 +73,6 @@ OU's Unofficial Digital Notice Board
       </tr>
     </table> </td></tr> ";
 	
-	
-	
-	
 	//-----------------------------------------------------------
 		}
 	}
@@ -88,7 +83,6 @@ OU's Unofficial Digital Notice Board
 	$conn = null;
 
 ?>
-
 <p>
 </div>
 </div>
